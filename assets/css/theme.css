@@ -93,6 +93,7 @@ d-article a {
 }
 
 .darkmode d-article,
+.darkmode d-article a,
 .darkmode d-article p,
 .darkmode d-appendix,
 .darkmode body {
