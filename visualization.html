@@ -2190,6 +2190,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     --text-size:        15px;
     --hover-color:      white;
     --bkgd-color:       #9D0F31;
+    margin-top:         0px;
   }
 
   /*-- Additional custom styles --*/
@@ -2212,6 +2213,9 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   .darkmode d-article,
   .darkmode d-article a,
   .darkmode d-article p,
+  .darkmode d-article h1,
+  .darkmode d-article h2,
+  .darkmode d-article h3,
   .darkmode d-appendix,
   .darkmode body {
     background-color: #222831;
@@ -2222,6 +2226,10 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     background-image: url("assets/img/header_bg_4.png");
     background-position: center;
     background-size: cover;
+  }
+
+  .darkmode li {
+    color: #EEEEEE;
   }</style>
   <style type="text/css">
   /* base style */
@@ -2437,19 +2445,61 @@ University.</p></p>
 
 
 <div class="d-article">
-<p><img src="assets/img/function_art.png" /></p>
+<h1 id="top-menu">Content</h1>
+<p>This gallery includes:</p>
+<ul>
+<li><a href="#generative-art">1. Generative Art</a></li>
+<li><a href="#covid-19-heatmap">2. COVID-19 Heatmap</a></li>
+<li><a href="#coursework-visualizations">3. Coursework
+Visualizations</a></li>
+</ul>
+<h2 id="generative-art">1. Generative Art</h2>
+<p>These are the generative arts that I created with <a
+href="https://koenderks.github.io/aRtsy/">aRtsy</a>. Different from the
+traditional artworks that feeds on human’s creativity and skills, the
+generative arts use algorithms as the brush creating artwork that
+captures the inherent beauty of math and logic.</p>
+<h2 id="function-shells">Function: Shells</h2>
+<p><img src="assets/img/function_art.png" /> The position of every point
+was calculated using the function</p>
+<p><span class="math display">\[\begin{align}
+  &amp;x =1.5x_i + cos(x_i) \\     
+  &amp;y =\sqrt{|y_i|} + sin(y_i^2 + x_i^2)
+\end{align}\]</span></p>
+<p>where (x, y) is the position of generated points. The color of the
+function are 9 randomly selected complement colors.</p>
 <p><br></p>
-<p><br> <img src="assets/img/collatz_art.png" /></p>
+<h2 id="collatz-conjecture-flame">Collatz Conjecture: Flame</h2>
+<p><img src="assets/img/collatz_art.png" /> This is the collatz
+conjecture created with Bucknell’s school color: Blue and Orange.</p>
 <p><br></p>
-<p><br> <img src="assets/img/Langton_ant_2.png" /> <br></p>
-<p><br> <img
-src="assets/img/covid_heatmap_cumulative_cases_medium.gif" /> <br></p>
+<h2 id="langtons-ant-error-n-terror">Langton’s Ant: Error N Terror</h2>
+<p><img src="assets/img/Langton_ant_2.png" /> This is a two dimensional
+grid colored by the <a
+href="https://www.sciencedirect.com/science/article/abs/pii/016727898690237X?via%3Dihub">Langton’s
+ant</a>, a turing machine that follows a specific set of rules.</p>
+<p><span style="float:right"><a href="#top-menu">Back to the
+top</a></span></p>
+<p><br></p>
+<h2 id="covid-19-heatmap">2. COVID-19 Heatmap</h2>
+<p>This section includes the COVID-19 heatmap for worldwide confirmed
+cases, deaths, and recoveries. The data comes from the Johns Hopkins
+University’s <a
+href="https://cran.r-project.org/web/packages/coronavirus/index.html">Coronavirus
+dataset</a>. I created the animation using the <a
+href="https://gganimate.com/">gganimate</a> package.</p>
+<p><img src="assets/img/covid_heatmap_cumulative_cases_medium.gif" />
+<br></p>
 <p><br> <img src="assets/img/covid_heatmap_daily_cases_slow.gif" />
 <br></p>
 <p><br> <img
 src="assets/img/covid_heatmap_cumulative_deaths_medium.gif" /> <br></p>
 <p><br> <img
 src="assets/img/covid_heatmap_cumulative_recoveries_medium.gif" /></p>
+<p><span style="float:right"><a href="#top-menu">Back to the
+top</a></span></p>
+<p><br></p>
+<h2 id="coursework-visualizations">3. Coursework Visualizations</h2>
 <div class="sourceCode" id="cb1"><pre
 class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
@@ -2459,6 +2509,15 @@ class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"><
 <div class="d-appendix">
 </div>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 
 <script>
 const darkmodeToggle = document.getElementsByClassName("fas fa-adjust")[0];

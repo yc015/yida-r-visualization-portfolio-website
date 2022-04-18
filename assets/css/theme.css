@@ -73,6 +73,7 @@ d-appendix {
   --text-size:        15px;
   --hover-color:      white;
   --bkgd-color:       #9D0F31;
+  margin-top:         0px;
 }
 
 /*-- Additional custom styles --*/
@@ -95,6 +96,9 @@ d-article a {
 .darkmode d-article,
 .darkmode d-article a,
 .darkmode d-article p,
+.darkmode d-article h1,
+.darkmode d-article h2,
+.darkmode d-article h3,
 .darkmode d-appendix,
 .darkmode body {
   background-color: #222831;
@@ -105,4 +109,8 @@ d-article a {
   background-image: url("assets/img/header_bg_4.png");
   background-position: center;
   background-size: cover;
+}
+
+.darkmode li {
+  color: #EEEEEE;
 }
