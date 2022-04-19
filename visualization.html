@@ -2452,6 +2452,7 @@ University.</p></p>
 <li><a href="#covid-19-heatmap">2. COVID-19 Heatmap</a></li>
 <li><a href="#coursework-visualizations">3. Coursework
 Visualizations</a></li>
+<li><a href="#Shiny-Web-Application">4. Shiny Web Application</a></li>
 </ul>
 <h2 id="generative-art">1. Generative Art</h2>
 <p>These are the generative arts that I created with <a
@@ -2488,18 +2489,142 @@ University’s <a
 href="https://cran.r-project.org/web/packages/coronavirus/index.html">Coronavirus
 dataset</a>. I created the animation using the <a
 href="https://gganimate.com/">gganimate</a> package.</p>
-<p><img src="assets/img/covid_heatmap_cumulative_cases_medium.gif" />
-<br></p>
-<p><br> <img src="assets/img/covid_heatmap_daily_cases_slow.gif" />
-<br></p>
-<p><br> <img
-src="assets/img/covid_heatmap_cumulative_deaths_medium.gif" /> <br></p>
-<p><br> <img
-src="assets/img/covid_heatmap_cumulative_recoveries_medium.gif" /></p>
+<h2 id="covid-19-cumulative-cases-from-jan.-2020-to-oct.-2021">COVID-19
+Cumulative Cases From Jan. 2020 to Oct. 2021</h2>
+<p><img
+src="assets/img/covid_heatmap_cumulative_cases_medium.gif" /></p>
+<p>This heatmap shows the cumulative confirmed COVID-19 cases from the
+Jan. 22, 2020 to Oct. 13, 2021. The map includes the changes in
+cumulative confirmed cases of 195 regions and countries. I fill the
+heatmap with the number of cumulative cases. As the animation shows, the
+cases quickly developed in Jan 2020 and spread to the majoritiy of world
+around the June 2020. By Oct. 13, 2021, the U.S., Brazil, and India bear
+the largest cumulative confirmed cases.</p>
+<p>I created the heatmap by first subseting the <strong>confirmed
+cases</strong> from the original dataset. I summed the
+<strong>cases</strong> variable on the level of <strong>date</strong>
+and <strong>country</strong> (which are also the variables of JHU’s
+COVID dataset). To get the cumulative cases, I then <code>cumsum</code>
+the grouped cases on <strong>date</strong>, which is also the <a
+href="https://gganimate.com/reference/transition_time.html">state</a> of
+animation.</p>
+<p>Notice that some countries, such as Turkmenistan and North Korea, are
+not included in this dataset. The unreported countries are colored in
+grey on this map.</p>
+<p><br></p>
+<h2 id="covid-19-daily-cases-from-jan.-2020-to-oct.-2021">COVID-19 Daily
+Cases From Jan. 2020 to Oct. 2021</h2>
+<p><img src="assets/img/covid_heatmap_daily_cases_slow.gif" /> This
+heatmap shows the daily confirmed COVID-19 cases from the Jan. 22, 2020
+to Oct. 13, 2021. The map includes 195 regions and countries. I fill the
+heatmap with the number of daily confirmed cases. Most of the countries
+has reported their first COVID-19 cases since the April 2020. China had
+the largest number of daily confirmed cases at the beginning of the
+pandemic (from Jan 2020 to May 2020), and daily cases in the U.S.,
+India, Brazil surged since April 2020.</p>
+<p>I created the heatmap by first subseting the <strong>confirmed
+cases</strong> from the original dataset. I then summed the
+<strong>cases</strong> variable on the level of <strong>date</strong>
+and <strong>country</strong> to get the number of daily cases. The
+animation transits along the <strong>date</strong> variable.</p>
+<p>Notice that some countries, such as Turkmenistan and North Korea, are
+not included in this dataset. The unreported countries are colored in
+grey on this map.</p>
+<p><br></p>
+<h2 id="covid-19-cumulative-deaths-from-jan.-2020-to-oct.-2021">COVID-19
+Cumulative Deaths From Jan. 2020 to Oct. 2021</h2>
+<p><img
+src="assets/img/covid_heatmap_cumulative_deaths_medium.gif" /></p>
+<p>This heatmap shows the cumulative deaths due to COVID-19 infection
+from the Jan. 22, 2020 to Oct. 13, 2021. The map includes 195 regions
+and countries. I fill the heatmap with the number of cumulative deaths.
+The death cases surged in China from Jan. 2020 to May 2020. By the
+October of 2021, most of the COVID-19 deaths occurred in the U.S.,
+Russia, India, and Brazil.</p>
+<p>The heatmap is created with a subset of <strong>death cases</strong>
+from the original dataset, following the same procedures for creating
+the cumulative confirmed cases heatmap.</p>
+<p>Notice that some countries, such as Turkmenistan and North Korea, are
+not included in this dataset. The unreported countries are colored in
+grey on this map.</p>
+<p><br></p>
+<h2
+id="covid-19-cumulative-recoveries-from-jan.-2020-to-oct.-2021">COVID-19
+Cumulative Recoveries From Jan. 2020 to Oct. 2021</h2>
+<p><img
+src="assets/img/covid_heatmap_cumulative_recoveries_medium.gif" /> This
+heatmap shows the cumulative COVID-19 recoveries from the Jan. 22, 2020
+to Oct. 13, 2021. The map includes 195 regions and countries. I fill the
+heatmap with the number of cumulative recoveries. By Oct. 13, 2021, most
+of the recoveries occurred in the U.S., Russia, India, Brazil, and
+Canada.</p>
+<p>The heatmap is created with a subset of <strong>recovery
+cases</strong> from the original dataset, following the same procedures
+for creating the cumulative confirmed cases heatmap.</p>
+<p>Notice that some countries, such as Turkmenistan and North Korea, are
+not included in this dataset. The unreported countries are colored in
+grey on this map.</p>
 <p><span style="float:right"><a href="#top-menu">Back to the
 top</a></span></p>
 <p><br></p>
 <h2 id="coursework-visualizations">3. Coursework Visualizations</h2>
+<h2 id="challenge-of-first-gen-college-students">Challenge of First-Gen
+College Students</h2>
+<p><img src="assets/img/first_gen_vs_completion_rate.png" /> This
+scatter plot shows the relationship between the completion rate and
+percent of the first-generation student among the U.S. institutions. The
+variable on the x-axis is the percent of students who finish their
+program within 150% of normal time (completion rate). The variable on
+the y-axis is the percent of first generation student at a
+institution.</p>
+<p>The scatter plot and the trend line show the negative correlation
+between the number of first-generation student and the institution’s
+average completion rate, revealing the hardship of first-gen students at
+the U.S. colleges.</p>
+<p>The data used to create this plot come from the <a
+href="https://rdrr.io/cran/Lock5Data/man/CollegeScores.html">CollegeScores</a>
+dataset of the <a
+href="https://cran.r-project.org/web/packages/Lock5Data/index.html">Lock5Data</a>
+package.</p>
+<p><br></p>
+<h2 id="more-exercise-better-metabolism">More Exercise Better
+metabolism!</h2>
+<p><img src="assets/img/pulse_rate_vs_exercise_frequency.png" /></p>
+<p>This violin plots overlay with box plots that show the distribution
+of student’s pulse rate based on their reported exercise frequency. The
+variable on the x-axis of the plot is how frequent a surveyed student
+will exercise (none, sometimes, or frequently). The variable on the
+y-axis of the plot is the pulse rate of the surveyed students.</p>
+<p>The plot shows that most students who frequently participate in
+physical activities will have a lower pulse rate. This finding is
+expected from a clinical perspective since physical exercise will
+improve a person’s metabolism, allowing more blood pumped into the
+circulation within each beat. Thus, the heart won’t need to pump that
+frequently (lower pulse rate) to sustain the system.</p>
+<p>The data used to create this plot come from a subset of the <a
+href="https://rdrr.io/cran/Lock5withR/man/StudentSurvey.html">Student
+Survey Data</a> dataset from <a
+href="https://cran.r-project.org/web/packages/Lock5Data/index.html">Lock5Data</a>
+package. Only the complete observations are used in creating the plot
+above.</p>
+<p><span style="float:right"><a href="#top-menu">Back to the
+top</a></span></p>
+<p><br></p>
+<h2 id="Shiny-Web-Application">Shiny Web App</h2>
+<p>I also created an interactive <a
+href="https://shiny.rstudio.com/">Shiny</a> web app that aims to help
+the intro-level stats students to understand the <em>confidence
+level</em>. Below are a screenshot of the application and a static plot
+that can be created with my app.</p>
+<p align="center">
+<img width="360" src="assets/img/screenshot_of_shiny_app.png">
+Screenshot of the Shiny App user interface.
+</p>
+<p align="center">
+<img width="360" src="assets/img/ninety_percent_confidence_interval_accuracy_plots.png">
+A sample plot that can be created with this application.
+</p>
+<p><br></p>
 <div class="sourceCode" id="cb1"><pre
 class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
