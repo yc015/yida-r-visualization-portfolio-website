@@ -2442,6 +2442,9 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <header class="header header--fixed" role="banner">
 <nav class="distill-site-nav distill-site-header">
 <div class="nav-left">
+<a class="logo" href="https://yc015.github.io/">
+<img src="assets/favicon/logo.png" alt="Logo"/>
+</a>
 <a href="index.html" class="title">Main Page</a>
 </div>
 <div class="nav-right">
@@ -2477,55 +2480,15 @@ heart disease!</p></p>
 <div class="layout-chunk" data-layout="l-body">
 
 </div>
+<h1 id="key-indicators-of-heart-diseases">Key Indicators of Heart
+Diseases</h1>
+<p>Heart disease is one of the most prevalent and fatal disease in the
+United States. According CDC, there are 18.2 millions cardiovascular
+patients in the United States, and 659000 people die from the heart
+disease each year.</p>
+<p>Identify the potential patients</p>
 <div class="layout-chunk" data-layout="l-body">
-<pre><code> HeartDisease      BMI        Smoking      AlcoholDrinking
- No :292422   Min.   :12.02   No :187887   No :298018     
- Yes: 27373   1st Qu.:24.03   Yes:131908   Yes: 21777     
-              Median :27.34                               
-              Mean   :28.33                               
-              3rd Qu.:31.42                               
-              Max.   :94.85                               
-                                                          
- Stroke       PhysicalHealth    MentalHealth    DiffWalking 
- No :307726   Min.   : 0.000   Min.   : 0.000   No :275385  
- Yes: 12069   1st Qu.: 0.000   1st Qu.: 0.000   Yes: 44410  
-              Median : 0.000   Median : 0.000               
-              Mean   : 3.372   Mean   : 3.898               
-              3rd Qu.: 2.000   3rd Qu.: 3.000               
-              Max.   :30.000   Max.   :30.000               
-                                                            
-     Sex              AgeCategory    
- Female:167805   65-69      : 34151  
- Male  :151990   60-64      : 33686  
-                 70-74      : 31065  
-                 55-59      : 29757  
-                 50-54      : 25382  
-                 80 or older: 24153  
-                 (Other)    :141601  
-                             Race       
- American Indian/Alaskan Native:  5202  
- Asian                         :  8068  
- Black                         : 22939  
- Hispanic                      : 27446  
- Other                         : 10928  
- White                         :245212  
-                                        
-                    Diabetic      PhysicalActivity     GenHealth     
- No                     :269653   No : 71838       Poor     : 11289  
- No, borderline diabetes:  6781   Yes:247957       Fair     : 34677  
- Yes                    : 40802                    Good     : 93129  
- Yes (during pregnancy) :  2559                    Very good:113858  
-                                                   Excellent: 66842  
-                                                                     
-                                                                     
-   SleepTime      Asthma       KidneyDisease SkinCancer  
- Min.   : 1.000   No :276923   No :308016    No :289976  
- 1st Qu.: 6.000   Yes: 42872   Yes: 11779    Yes: 29819  
- Median : 7.000                                          
- Mean   : 7.097                                          
- 3rd Qu.: 8.000                                          
- Max.   :24.000                                          
-                                                         </code></pre>
+
 </div>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="cardiac_files/figure-html5/unnamed-chunk-3-1.png" width="624" /></p>
@@ -2534,7 +2497,7 @@ heart disease!</p></p>
 <p><img src="cardiac_files/figure-html5/unnamed-chunk-4-1.png" width="624" /></p>
 </div>
 <div class="layout-chunk" data-layout="l-body">
-<p><img src="cardiac_files/figure-html5/unnamed-chunk-5-1.png" width="624" /></p>
+
 </div>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="cardiac_files/figure-html5/unnamed-chunk-6-1.png" width="624" /></p>
@@ -2549,26 +2512,23 @@ heart disease!</p></p>
 <p><img src="cardiac_files/figure-html5/unnamed-chunk-9-1.png" width="624" /></p>
 </div>
 <div class="layout-chunk" data-layout="l-body">
-<p><img
-src="cardiac_files/figure-html5/unnamed-chunk-10-1.gif" /><!-- --></p>
+<p><img src="cardiac_files/figure-html5/unnamed-chunk-10-1.png" width="624" /></p>
 </div>
 <div class="layout-chunk" data-layout="l-body">
-<p><img src="cardiac_files/figure-html5/unnamed-chunk-11-1.png" width="624" /></p>
+<p><img
+src="cardiac_files/figure-html5/unnamed-chunk-11-1.gif" /><!-- --></p>
 </div>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="cardiac_files/figure-html5/unnamed-chunk-12-1.png" width="624" /></p>
 </div>
 <div class="layout-chunk" data-layout="l-body">
-<div id="htmlwidget-2edac49fac51d2b5e06e" style="width:624px;height:384px;" class="plotly html-widget"></div>
-<script type="application/json" data-for="htmlwidget-2edac49fac51d2b5e06e">{"x":{"visdat":{"9ff01f222542":["function () ","plotlyVisDat"]},"cur_data":"9ff01f222542","attrs":{"9ff01f222542":{"x":["Diabetic","Smoking","BMI","Asthma","PhysicalActivity","HeartDisease"],"y":["Diabetic","Smoking","BMI","Asthma","PhysicalActivity","HeartDisease"],"text":[[1,0.0584338878199687,0.203493798110792,0.0445651886683612,-0.140571452118452,0.183071696820331],[0.0584338878199687,1,0.0231181124326992,0.0241485320183006,-0.0971737659539617,0.107764156025938],[0.203493798110792,0.0231181124326992,1,0.0923450190062236,-0.150615993902579,0.051803190655746],[0.0445651886683612,0.0241485320183006,0.0923450190062236,1,-0.0415258817742263,0.0414441511003226],[-0.140571452118452,-0.0971737659539617,-0.150615993902579,-0.0415258817742263,1,-0.100029933854044],[0.183071696820331,0.107764156025938,0.051803190655746,0.0414441511003226,-0.100029933854044,1]],"z":[[1,0.0584338878199687,0.203493798110792,0.0445651886683612,-0.140571452118452,0.183071696820331],[0.0584338878199687,1,0.0231181124326992,0.0241485320183006,-0.0971737659539617,0.107764156025938],[0.203493798110792,0.0231181124326992,1,0.0923450190062236,-0.150615993902579,0.051803190655746],[0.0445651886683612,0.0241485320183006,0.0923450190062236,1,-0.0415258817742263,0.0414441511003226],[-0.140571452118452,-0.0971737659539617,-0.150615993902579,-0.0415258817742263,1,-0.100029933854044],[0.183071696820331,0.107764156025938,0.051803190655746,0.0414441511003226,-0.100029933854044,1]],"zmin":-0.4,"zmax":0.4,"hovertemplate":"Var 1: %{x}<br />Var 2: %{y}<br />Corr: %{z:.4f}","colors":["#007F35","#FFFFFF","#9F002D"],"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"heatmap"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"xaxis":{"domain":[0,1],"automargin":true,"title":[]},"yaxis":{"domain":[0,1],"automargin":true,"title":[]},"scene":{"zaxis":{"title":[]}},"hovermode":"closest","showlegend":false,"legend":{"yanchor":"top","y":0.5}},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"colorbar":{"title":"","ticklen":2,"len":0.5,"lenmode":"fraction","y":1,"yanchor":"top"},"colorscale":[["0","rgba(0,127,53,1)"],["0.0416666666666667","rgba(43,138,69,1)"],["0.0833333333333333","rgba(67,148,85,1)"],["0.125","rgba(88,159,101,1)"],["0.166666666666667","rgba(107,170,117,1)"],["0.208333333333333","rgba(126,180,133,1)"],["0.25","rgba(144,191,150,1)"],["0.291666666666667","rgba(163,201,167,1)"],["0.333333333333333","rgba(181,212,184,1)"],["0.375","rgba(199,223,201,1)"],["0.416666666666667","rgba(218,234,219,1)"],["0.458333333333333","rgba(236,244,237,1)"],["0.5","rgba(255,255,255,1)"],["0.541666666666667","rgba(250,236,235,1)"],["0.583333333333333","rgba(245,217,216,1)"],["0.625","rgba(239,198,197,1)"],["0.666666666666667","rgba(232,179,179,1)"],["0.708333333333333","rgba(225,160,160,1)"],["0.75","rgba(217,142,142,1)"],["0.791666666666667","rgba(209,123,125,1)"],["0.833333333333333","rgba(200,104,108,1)"],["0.875","rgba(190,85,91,1)"],["0.916666666666667","rgba(181,64,75,1)"],["0.958333333333333","rgba(170,41,60,1)"],["1","rgba(159,0,45,1)"]],"showscale":true,"x":["Diabetic","Smoking","BMI","Asthma","PhysicalActivity","HeartDisease"],"y":["Diabetic","Smoking","BMI","Asthma","PhysicalActivity","HeartDisease"],"text":[[1,0.0584338878199687,0.203493798110792,0.0445651886683612,-0.140571452118452,0.183071696820331],[0.0584338878199687,1,0.0231181124326992,0.0241485320183006,-0.0971737659539617,0.107764156025938],[0.203493798110792,0.0231181124326992,1,0.0923450190062236,-0.150615993902579,0.051803190655746],[0.0445651886683612,0.0241485320183006,0.0923450190062236,1,-0.0415258817742263,0.0414441511003226],[-0.140571452118452,-0.0971737659539617,-0.150615993902579,-0.0415258817742263,1,-0.100029933854044],[0.183071696820331,0.107764156025938,0.051803190655746,0.0414441511003226,-0.100029933854044,1]],"z":[[1,0.0584338878199687,0.203493798110792,0.0445651886683612,-0.140571452118452,0.183071696820331],[0.0584338878199687,1,0.0231181124326992,0.0241485320183006,-0.0971737659539617,0.107764156025938],[0.203493798110792,0.0231181124326992,1,0.0923450190062236,-0.150615993902579,0.051803190655746],[0.0445651886683612,0.0241485320183006,0.0923450190062236,1,-0.0415258817742263,0.0414441511003226],[-0.140571452118452,-0.0971737659539617,-0.150615993902579,-0.0415258817742263,1,-0.100029933854044],[0.183071696820331,0.107764156025938,0.051803190655746,0.0414441511003226,-0.100029933854044,1]],"zmin":-0.4,"zmax":0.4,"hovertemplate":"Var 1: %{x}<br />Var 2: %{y}<br />Corr: %{z:.4f}","type":"heatmap","xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<p><img src="cardiac_files/figure-html5/unnamed-chunk-13-1.png" width="624" /></p>
 </div>
 <div class="layout-chunk" data-layout="l-body">
-
+<div id="htmlwidget-0f52d533339db88c7e7e" style="width:624px;height:384px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-0f52d533339db88c7e7e">{"x":{"visdat":{"ea20a53d6f":["function () ","plotlyVisDat"]},"cur_data":"ea20a53d6f","attrs":{"ea20a53d6f":{"x":["Stroke","Diabetic","Smoking","BMI","PhysicalActivity","HeartDisease"],"y":["Stroke","Diabetic","Smoking","BMI","PhysicalActivity","HeartDisease"],"text":[[1,0.108406630073861,0.0612260395164755,0.0197329823463947,-0.0794551948440198,0.196835298842868],[0.108406630073861,1,0.0584338878199687,0.203493798110792,-0.140571452118452,0.183071696820331],[0.0612260395164755,0.0584338878199687,1,0.0231181124326992,-0.0971737659539617,0.107764156025938],[0.0197329823463947,0.203493798110792,0.0231181124326992,1,-0.150615993902579,0.051803190655746],[-0.0794551948440198,-0.140571452118452,-0.0971737659539617,-0.150615993902579,1,-0.100029933854044],[0.196835298842868,0.183071696820331,0.107764156025938,0.051803190655746,-0.100029933854044,1]],"z":[[1,0.108406630073861,0.0612260395164755,0.0197329823463947,-0.0794551948440198,0.196835298842868],[0.108406630073861,1,0.0584338878199687,0.203493798110792,-0.140571452118452,0.183071696820331],[0.0612260395164755,0.0584338878199687,1,0.0231181124326992,-0.0971737659539617,0.107764156025938],[0.0197329823463947,0.203493798110792,0.0231181124326992,1,-0.150615993902579,0.051803190655746],[-0.0794551948440198,-0.140571452118452,-0.0971737659539617,-0.150615993902579,1,-0.100029933854044],[0.196835298842868,0.183071696820331,0.107764156025938,0.051803190655746,-0.100029933854044,1]],"zmin":-0.4,"zmax":0.4,"hovertemplate":"Var 1: %{x}<br />Var 2: %{y}<br />Corr: %{z:.4f}","colors":["#007F35","#FFFFFF","#9F002D"],"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"heatmap"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"xaxis":{"domain":[0,1],"automargin":true,"title":[]},"yaxis":{"domain":[0,1],"automargin":true,"title":[]},"scene":{"zaxis":{"title":[]}},"hovermode":"closest","showlegend":false,"legend":{"yanchor":"top","y":0.5}},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"colorbar":{"title":"","ticklen":2,"len":0.5,"lenmode":"fraction","y":1,"yanchor":"top"},"colorscale":[["0","rgba(0,127,53,1)"],["0.0416666666666667","rgba(43,138,69,1)"],["0.0833333333333333","rgba(67,148,85,1)"],["0.125","rgba(88,159,101,1)"],["0.166666666666667","rgba(107,170,117,1)"],["0.208333333333333","rgba(126,180,133,1)"],["0.25","rgba(144,191,150,1)"],["0.291666666666667","rgba(163,201,167,1)"],["0.333333333333333","rgba(181,212,184,1)"],["0.375","rgba(199,223,201,1)"],["0.416666666666667","rgba(218,234,219,1)"],["0.458333333333333","rgba(236,244,237,1)"],["0.5","rgba(255,255,255,1)"],["0.541666666666667","rgba(250,236,235,1)"],["0.583333333333333","rgba(245,217,216,1)"],["0.625","rgba(239,198,197,1)"],["0.666666666666667","rgba(232,179,179,1)"],["0.708333333333333","rgba(225,160,160,1)"],["0.75","rgba(217,142,142,1)"],["0.791666666666667","rgba(209,123,125,1)"],["0.833333333333333","rgba(200,104,108,1)"],["0.875","rgba(190,85,91,1)"],["0.916666666666667","rgba(181,64,75,1)"],["0.958333333333333","rgba(170,41,60,1)"],["1","rgba(159,0,45,1)"]],"showscale":true,"x":["Stroke","Diabetic","Smoking","BMI","PhysicalActivity","HeartDisease"],"y":["Stroke","Diabetic","Smoking","BMI","PhysicalActivity","HeartDisease"],"text":[[1,0.108406630073861,0.0612260395164755,0.0197329823463947,-0.0794551948440198,0.196835298842868],[0.108406630073861,1,0.0584338878199687,0.203493798110792,-0.140571452118452,0.183071696820331],[0.0612260395164755,0.0584338878199687,1,0.0231181124326992,-0.0971737659539617,0.107764156025938],[0.0197329823463947,0.203493798110792,0.0231181124326992,1,-0.150615993902579,0.051803190655746],[-0.0794551948440198,-0.140571452118452,-0.0971737659539617,-0.150615993902579,1,-0.100029933854044],[0.196835298842868,0.183071696820331,0.107764156025938,0.051803190655746,-0.100029933854044,1]],"z":[[1,0.108406630073861,0.0612260395164755,0.0197329823463947,-0.0794551948440198,0.196835298842868],[0.108406630073861,1,0.0584338878199687,0.203493798110792,-0.140571452118452,0.183071696820331],[0.0612260395164755,0.0584338878199687,1,0.0231181124326992,-0.0971737659539617,0.107764156025938],[0.0197329823463947,0.203493798110792,0.0231181124326992,1,-0.150615993902579,0.051803190655746],[-0.0794551948440198,-0.140571452118452,-0.0971737659539617,-0.150615993902579,1,-0.100029933854044],[0.196835298842868,0.183071696820331,0.107764156025938,0.051803190655746,-0.100029933854044,1]],"zmin":-0.4,"zmax":0.4,"hovertemplate":"Var 1: %{x}<br />Var 2: %{y}<br />Corr: %{z:.4f}","type":"heatmap","xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
 </div>
-<div class="layout-chunk" data-layout="l-body">
-<p><img src="cardiac_files/figure-html5/unnamed-chunk-15-1.png" width="624" /></p>
-</div>
-<div class="sourceCode" id="cb2"><pre
+<div class="sourceCode" id="cb1"><pre
 class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
