@@ -2407,14 +2407,6 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   }</style>
   <!--/radix_placeholder_distill-->
   <script src="site_libs/header-attrs-2.13/header-attrs.js"></script>
-  <script src="site_libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
-  <script src="site_libs/plotly-binding-4.10.0/plotly.js"></script>
-  <script src="site_libs/typedarray-0.1/typedarray.min.js"></script>
-  <script src="site_libs/jquery-3.5.1/jquery.min.js"></script>
-  <link href="site_libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet" />
-  <script src="site_libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
-  <link href="site_libs/plotly-htmlwidgets-css-2.5.1/plotly-htmlwidgets.css" rel="stylesheet" />
-  <script src="site_libs/plotly-main-2.5.1/plotly-latest.min.js"></script>
   <script src="site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
   <link href="site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
@@ -2486,47 +2478,218 @@ Diseases</h1>
 United States. According CDC, there are 18.2 millions cardiovascular
 patients in the United States, and 659000 people die from the heart
 disease each year.</p>
-<p>Identify the potential patients</p>
+<p>Identifying the risk factor of developing heart disease allows
+clinicians to provide preventive treatment for potential patients.
+However, heart disease are correlated with a lot of factors, such as
+age, smoking, and engagement with physical activities. None of these
+factors alone seem to be determinative and provide a good prediction of
+future heart failures.</p>
+<p>Thus, in this exploratory data analysis, we will leverages
+visualization techniques to discover the relationship between heart
+disease and different risk factors, digging out the strongest indicators
+of cardiac diseases.</p>
+<h1 id="top-menu">Content</h1>
+<p>This gallery includes:</p>
+<ul>
+<li><a href="#dataset-description">1. Dataset Description</a></li>
+<li><a href="#Age">2. Risk Factor: Age</a></li>
+<li><a href="#Smoking">3. Risk Factor: Smoking</a></li>
+<li><a href="#Sleep">4. Correlation between Sleep and Heart
+Disease</a></li>
+<li><a href="#complication">5. Complications of Heart Disease</a></li>
+<li><a href="#Diabetes">6. Risk Factors: Diabetes &amp; Obesity</a></li>
+<li><a href="#Overview">7. Overview of All Risk Factors</a></li>
+</ul>
+<h2 id="dataset-description">1. Dataset Description</h2>
+<p>The dataset used in the project comes from the Behavioral Risk Factor
+Surveillance System of Centers for Disease Control and Prevention (CDC).
+CDC collected these data from the United State’s residents through
+annual telephone survey. The dataset used in the project is the CDC’s
+2020 survey of 319,795 adults with answers to 18 selected survey
+questions.</p>
+<p>In this project, we will explore the relationships among heart
+disease, smoking, phyiscal activity engagement, body mass index (BMI),
+average sleep time, stroke, and diabetes. Here are some short
+descriptions of these chosen variables:</p>
+<ul>
+<li>Heart Disease: A <em>Binary</em> variable that is
+<strong>Yes</strong> if the survey’s respondent have ever reported
+having coronary heart disease or myocardial infarction and
+<strong>No</strong> otherwise.</li>
+<li>Smoking: A <em>Binary</em> variable that is <strong>Yes</strong> if
+the respondent has smoked at least 100 cigarettes in their entire life
+and <strong>No</strong> otherwise.</li>
+<li>Physical Activity Engagement: A <em>Binary</em> variable that is
+<strong>Yes</strong> if the respondent did physical activity or exercise
+during the past 30 days other than their regular job and
+<strong>No</strong> otherwise.</li>
+<li>Body Mass Index (BMI): A <strong>Continuous</strong> variable which
+can be computed as the body mass (in kilograms) divided by the square of
+the body height (in meters). The unit of BMI is kilograms / <span
+class="math inline">\(\text{meters}^2\)</span>,</li>
+<li>Average Sleep Time: An <strong>Integer</strong> variable that
+represents the average hours of sleep of the respondent in 24-hour.</li>
+<li>Stroke: A <em>Binary</em> variable that is <strong>Yes</strong> if
+the respondent have ever reported having a stroke and
+<strong>No</strong> otherwise.</li>
+<li>Diabetes: A <em>Categorical</em> variable that represents if the
+respondent has ever had the diabetes in their life. The variable has
+four categories: “No” (Never have diabetes), “No, borderline” (Do not
+have diabetes but have risk of developing it), “Yes” (Have or ever had
+diabetes), and “Yes, during pregnancy” (have/had diabetes during the
+pregnancy).</li>
+<li>General Health Condition: A <strong>Categorical</strong> variable.
+It is what the respondent would say about their health condition in
+general. The variable has five categories: “Excellent”, “Very Good”,
+“Good”, “Fair”, and “Poor”.</li>
+</ul>
+<p><span style="float:right"><a href="#top-menu">Back to the
+top</a></span></p>
+<p><br></p>
 <div class="layout-chunk" data-layout="l-body">
 
 </div>
+<h2 id="Age">2. Heart Disease and Age</h2>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="cardiac_files/figure-html5/unnamed-chunk-3-1.png" width="1950" /></p>
 </div>
+<p>Age is a common risk factor for cardiac and vascular diseases. As we
+become older, our metabolism and circulation system also degenerates.
+The elder citizens are thus more likely to develop coronary heart
+disease or myocardial infarction than their younger counterparts. As
+shown in the bar chart above, the portion of respondents who have or
+ever had the heart disease increases along the ages. For the respondents
+who are 80 or older, more than 20% of them reported having heart
+diseases.</p>
+<p><span style="float:right"><a href="#top-menu">Back to the
+top</a></span></p>
+<p><br></p>
+<h2 id="Smoking">3. Heart Disease and Smoking</h2>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="cardiac_files/figure-html5/unnamed-chunk-4-1.png" width="1950" /></p>
 </div>
+<p>In addition to the age, another common risk factor for the cancer,
+cardiac, and pulmonary diseases is smoking. In the survey, CDC asks if a
+respondent have ever smoked more than 100 cigarettes in their entire
+life. If the answer is yes, CDC records the variable <em>Smoking</em> as
+<strong>Yes</strong> for that (respondent) observation.</p>
+<p>As shown in the mosaic plot, the portion of respondents with heart
+disease is almost double when the respondents smoke, indicating the
+smoking is a major risk factor. The respondents who smoked and have
+heart disease are also more likely to have a poor or fair general health
+condition.</p>
+<p><span style="float:right"><a href="#top-menu">Back to the
+top</a></span></p>
+<p><br></p>
 <div class="layout-chunk" data-layout="l-body">
 
 </div>
+<h3
+id="alluvial-plot-relationships-among-heart-disease-age-and-smoking">3.1
+Alluvial Plot: relationships among heart disease, age, and smoking</h3>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="cardiac_files/figure-html5/unnamed-chunk-6-1.png" width="1950" /></p>
 </div>
+<p>From the previous two sections, we have seen that the
+<strong>Age</strong> and <strong>Smoking</strong> are two strong
+indicators of heart disease. This Alluvial plot flowing from three age
+groups and smoking history to the heart disease conditions will help us
+confirm these findings.</p>
+<p>To create this Alluvial plot, I group the respondents with age from
+18 - 44, 45 - 64, and 65 or older into three groups, each have roughly a
+equal number of respondents. Most of the red flow (respondents who have
+or ever had heart disease) comes from the <em>age group: &gt; 65</em>
+and then flow to the <em>smoking: Yes</em> category. This is consistent
+with our previous observations.</p>
+<p><span style="float:right"><a href="#top-menu">Back to the
+top</a></span></p>
+<p><br></p>
+<h2 id="Sleep">4. Heart Disease and Sleep Time</h2>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="cardiac_files/figure-html5/unnamed-chunk-7-1.png" width="1950" /></p>
 </div>
+<p>How many hours of sleep does a respondent have when they have or
+never had heart disease? From the barchart above, we can find that
+people who sleep 3 hours (too short), 12 hours, and &gt; 19 hours (too
+long) are most likely to have heart disease. Most of the healthy
+respondents sleep around 7 hours per day.</p>
+<p><span style="float:right"><a href="#top-menu">Back to the
+top</a></span></p>
+<p><br></p>
+<h2 id="complication">5. Common Complication of Heart Disease</h2>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="cardiac_files/figure-html5/unnamed-chunk-8-1.png" width="1950" /></p>
 </div>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="cardiac_files/figure-html5/unnamed-chunk-9-1.png" width="1950" /></p>
 </div>
+<p>What are the common complications of the heart disease? We know that
+a vascular disease, such as <strong>stroke</strong>, usually comes with
+a deteriorated circulation system. As shown in the Venn Diagram, about
+37.1% of respondents who have stroke also reported having heart disease.
+Surprisingly, diabetes also seem to be correlated with heart disease.
+33.3% of respondents who have ever reported having heart disease also
+have diabetes.</p>
+<p><span style="float:right"><a href="#top-menu">Back to the
+top</a></span></p>
+<p><br></p>
+<h2 id="Diabetes">6. Heart Disease, Diabetes, and Obesity</h2>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="cardiac_files/figure-html5/unnamed-chunk-10-1.png" width="1950" /></p>
 </div>
+<p>It is not obvious why the diabetes is correlated to the heart
+failure. However, we know that the type 2 diabetes usually relate to the
+obesity (high BMI), which maybe the actual cause of heart disease.</p>
+<p>From the box plot above, we can see that the respondents with
+diabetes (except during pregnancy) have a higher median BMI, and the
+heart disease further magnifies this difference. For people with no or
+borderline diabetes, their median BMI is higher when they have ever had
+the heart disease.</p>
+<p><br></p>
 <div class="layout-chunk" data-layout="l-body">
 <p><img
 src="cardiac_files/figure-html5/unnamed-chunk-11-1.gif" /><!-- --></p>
 </div>
+<p>See the animation plot above. For almost all racial groups, except
+the native American, people who ever have heart disease also have a
+higher BMI (obesity).</p>
+<p><br></p>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="cardiac_files/figure-html5/unnamed-chunk-12-1.png" width="1950" /></p>
 </div>
+<p>The increasing fat in human body can enlarge the ventricle and atrium
+chambers, severely damaging the cardiac functions. Thus, a positive
+correlation between BMI and heart disease is expected. In the mosaic
+plot above, we introduce an additional variable, <em>Physical Activity
+Engagment</em>, and we discretize the BMI into four levels: underweight
+(BMI &lt; 18), healthy (18 &lt;= BMI &lt; 25), overweight (25 &lt;= BMI
+&lt; 30), and obesity (30 &lt;= BMI).</p>
+<p>As the plot shows, not only does the people with heart disease have a
+higher obesity rate but they also engage less with the physical
+activity.</p>
+<p><span style="float:right"><a href="#top-menu">Back to the
+top</a></span></p>
+<p><br></p>
+<h2 id="Overview">7. An Overview of Heart Disease Risk Factors</h2>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="cardiac_files/figure-html5/unnamed-chunk-13-1.png" width="1950" /></p>
 </div>
+<p>To summarize our findings, I compute the Chi-square correlations
+between the risk factors that we identify in the previous sections. The
+Chi-square correlation ranges from -1 to 1, the most negative to the
+most positive correlation.</p>
+<p>As the correlation matrix shows, the vascular disease, stroke, has
+the strongest correlation with heart disease, and the engagement with
+physical activity has the most negative correlation with developing
+heart disease. The obesity has a strong relationship with diabetes but
+is not an indicator of heart disease.</p>
+<p>In short, exercising, no smoking, and having less sugar and fat in
+our meals seem to be the best way protect us from developing heart
+disease.</p>
+<p><span style="float:right"><a href="#top-menu">Back to the
+top</a></span></p>
 <div class="layout-chunk" data-layout="l-body">
-<div id="htmlwidget-c88a65144b9c36b7575d" style="width:500px;height:400px;" class="plotly html-widget"></div>
-<script type="application/json" data-for="htmlwidget-c88a65144b9c36b7575d">{"x":{"visdat":{"f92c6d282d72":["function () ","plotlyVisDat"]},"cur_data":"f92c6d282d72","attrs":{"f92c6d282d72":{"x":["Stroke","Diabetic","Smoking","BMI","PhysicalActivity","HeartDisease"],"y":["Stroke","Diabetic","Smoking","BMI","PhysicalActivity","HeartDisease"],"text":[[1,0.108406630073861,0.0612260395164755,0.0197329823463947,-0.0794551948440198,0.196835298842868],[0.108406630073861,1,0.0584338878199687,0.203493798110792,-0.140571452118452,0.183071696820331],[0.0612260395164755,0.0584338878199687,1,0.0231181124326992,-0.0971737659539617,0.107764156025938],[0.0197329823463947,0.203493798110792,0.0231181124326992,1,-0.150615993902579,0.051803190655746],[-0.0794551948440198,-0.140571452118452,-0.0971737659539617,-0.150615993902579,1,-0.100029933854044],[0.196835298842868,0.183071696820331,0.107764156025938,0.051803190655746,-0.100029933854044,1]],"z":[[1,0.108406630073861,0.0612260395164755,0.0197329823463947,-0.0794551948440198,0.196835298842868],[0.108406630073861,1,0.0584338878199687,0.203493798110792,-0.140571452118452,0.183071696820331],[0.0612260395164755,0.0584338878199687,1,0.0231181124326992,-0.0971737659539617,0.107764156025938],[0.0197329823463947,0.203493798110792,0.0231181124326992,1,-0.150615993902579,0.051803190655746],[-0.0794551948440198,-0.140571452118452,-0.0971737659539617,-0.150615993902579,1,-0.100029933854044],[0.196835298842868,0.183071696820331,0.107764156025938,0.051803190655746,-0.100029933854044,1]],"zmin":-0.4,"zmax":0.4,"hovertemplate":"Var 1: %{x}<br />Var 2: %{y}<br />Corr: %{z:.4f}","colors":["#007F35","#FFFFFF","#9F002D"],"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"heatmap"}},"layout":{"width":500,"height":400,"margin":{"b":40,"l":60,"t":25,"r":10},"xaxis":{"domain":[0,1],"automargin":true,"title":[]},"yaxis":{"domain":[0,1],"automargin":true,"title":[]},"scene":{"zaxis":{"title":[]}},"hovermode":"closest","showlegend":false,"legend":{"yanchor":"top","y":0.5}},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"colorbar":{"title":"Correlation","ticklen":2,"len":0.5,"lenmode":"fraction","y":1,"yanchor":"top"},"colorscale":[["0","rgba(0,127,53,1)"],["0.0416666666666667","rgba(43,138,69,1)"],["0.0833333333333333","rgba(67,148,85,1)"],["0.125","rgba(88,159,101,1)"],["0.166666666666667","rgba(107,170,117,1)"],["0.208333333333333","rgba(126,180,133,1)"],["0.25","rgba(144,191,150,1)"],["0.291666666666667","rgba(163,201,167,1)"],["0.333333333333333","rgba(181,212,184,1)"],["0.375","rgba(199,223,201,1)"],["0.416666666666667","rgba(218,234,219,1)"],["0.458333333333333","rgba(236,244,237,1)"],["0.5","rgba(255,255,255,1)"],["0.541666666666667","rgba(250,236,235,1)"],["0.583333333333333","rgba(245,217,216,1)"],["0.625","rgba(239,198,197,1)"],["0.666666666666667","rgba(232,179,179,1)"],["0.708333333333333","rgba(225,160,160,1)"],["0.75","rgba(217,142,142,1)"],["0.791666666666667","rgba(209,123,125,1)"],["0.833333333333333","rgba(200,104,108,1)"],["0.875","rgba(190,85,91,1)"],["0.916666666666667","rgba(181,64,75,1)"],["0.958333333333333","rgba(170,41,60,1)"],["1","rgba(159,0,45,1)"]],"showscale":true,"x":["Stroke","Diabetic","Smoking","BMI","PhysicalActivity","HeartDisease"],"y":["Stroke","Diabetic","Smoking","BMI","PhysicalActivity","HeartDisease"],"text":[[1,0.108406630073861,0.0612260395164755,0.0197329823463947,-0.0794551948440198,0.196835298842868],[0.108406630073861,1,0.0584338878199687,0.203493798110792,-0.140571452118452,0.183071696820331],[0.0612260395164755,0.0584338878199687,1,0.0231181124326992,-0.0971737659539617,0.107764156025938],[0.0197329823463947,0.203493798110792,0.0231181124326992,1,-0.150615993902579,0.051803190655746],[-0.0794551948440198,-0.140571452118452,-0.0971737659539617,-0.150615993902579,1,-0.100029933854044],[0.196835298842868,0.183071696820331,0.107764156025938,0.051803190655746,-0.100029933854044,1]],"z":[[1,0.108406630073861,0.0612260395164755,0.0197329823463947,-0.0794551948440198,0.196835298842868],[0.108406630073861,1,0.0584338878199687,0.203493798110792,-0.140571452118452,0.183071696820331],[0.0612260395164755,0.0584338878199687,1,0.0231181124326992,-0.0971737659539617,0.107764156025938],[0.0197329823463947,0.203493798110792,0.0231181124326992,1,-0.150615993902579,0.051803190655746],[-0.0794551948440198,-0.140571452118452,-0.0971737659539617,-0.150615993902579,1,-0.100029933854044],[0.196835298842868,0.183071696820331,0.107764156025938,0.051803190655746,-0.100029933854044,1]],"zmin":-0.4,"zmax":0.4,"hovertemplate":"Var 1: %{x}<br />Var 2: %{y}<br />Corr: %{z:.4f}","type":"heatmap","xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+
 </div>
 <div class="sourceCode" id="cb1"><pre
 class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
@@ -2537,6 +2700,15 @@ class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"><
 <div class="d-appendix">
 </div>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 
 <script>
 const darkmodeToggle = document.getElementsByClassName("fas fa-adjust")[0];
